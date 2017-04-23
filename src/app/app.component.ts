@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Goal } from './goal/goal';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  courseGoals = [
+    { title: 'Master Styling', isActive: true},
+    { title: 'Understand animations', isActive: false},
+    { title: 'Master Angular Animations', isActive: false}
+  ] as Array<Goal>;
 }
