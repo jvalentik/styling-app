@@ -8,7 +8,8 @@ describe('styling-app App', () => {
   });
 
   it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
+    page.navigateTo()
+        .then(() => page.getParagraphText())
+        .then(text => expect(text).toEqual('My quotes'));
+    });
 });
